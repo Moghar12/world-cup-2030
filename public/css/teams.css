@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color: #be0707;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition: width none;
+}
+
+html {
+    font-size: 20px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+body {
+    overflow-x: hidden;
+    background: var(--black);
+    margin: 100px;
+}
+
+
+.heading span {
+    color: var(--main-color);
+}
+
+.teams {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+
+}
+
+.team {
+    width: 220px;
+    background-color: rgba(201, 241, 232, 0.856);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+img {
+    height: 62.7px;
+    max-width: 94px;
+    border: 2px solid gold;
+    border-radius: 5px;
+}
+
+.name{
+    color: black;
+    font-size: 20px;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.676);
+    padding: 10px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.header .logo i {
+    padding-right: .5rem;
+    color: var(--main-color);
+    animation: floating 3s linear infinite;
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0rem);
+    }
+
+    50% {
+        transform: translateY(-1rem);
+    }
+}
+
+.header .navbar a {
+    font-size: 20px;
+    color: #fff;
+    margin: 0 1rem;
+}
+
+.header .navbar a.active,
+.header .navbar a:hover {
+    color: var(--main-color);
+}
+
+.header .icons a,
+.header .icons div {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.header .icons a:hover,
+.header .icons div:hover {
+    color: var(--main-color);
+}
+
+#menu-btn {
+    display: none;
+}
+
+.header .search-form {
+    position: absolute;
+    top: 115%;
+    right: -105%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+}
+
+.header .search-form.active {
+    right: 2rem;
+    opacity: 1;
+    transition: .4s linear;
+}
+
+.header .search-form input {
+    width: 100%;
+    padding: 0 1.5rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.header .search-form label {
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: var(--main-color);
+}
+
+.header.active {
+    padding: 2rem 9%;
+    background: #222;
+}
+.swiper-navBtn {
+    color: #000;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 18px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #000;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color:transparent;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown-content {
+    display: none;
+    background-color: #222222d0;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+input[type="submit"] {
+  border: none;
+  background: none;
+  padding: 0;
+  text-transform: capitalize ;
+  font-size: 1.7rem;
+    color: #fff;
+    margin: 0 1rem;
+}
+input[type="submit"].active,
+input[type="submit"]:hover {
+    color: var(--main-color);
+}
